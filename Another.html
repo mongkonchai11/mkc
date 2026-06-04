@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Items - MongKonChai Hardware</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body> 
+    <div id="nav"> 
+        <span class="burger-icon" onclick="showMenu()">☰</span>
+        <div class="header">
+            <h1>MongKonChai Hardware</h1>
+            <h2>ร้านวัสดุก่อสร้าง และ เครื่องมือ และ สีทาบ้าน</h2>
+        </div>
+    </div> 
+
+    <div id="main-page">
+        <div class="menu-links" id="sidebar-menu">
+            <span class="close-icon" onclick="closeMenu()">&times;</span>
+            <div class="sub">
+                <a href="index.html"><button class="btn">Home</button></a>
+                <a href="https://share.google/1BCmZyEOqx1iikYS7"><button class="btn">Location</button></a>
+                <a href="contact.html"><button class="btn">Contact</button></a>
+                <a href="Another.html"><button class="btn">Another Items</button></a>
+
+                <div class="dropdown">
+                    <button class="btn dropbtn">Other Product ▾</button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="filterLists('all')">ดูทั้งหมด</a>
+                        <a href="#" onclick="filterLists('construction')">เครื่องมือช่างก่อสร้าง</a>
+                        <a href="#" onclick="filterLists('electrical')">เครื่องมือช่างไฟฟ้า</a>
+                        <a href="#" onclick="filterLists('plumbing')">เครื่องมือช่างประปา</a>
+                        <a href="#" onclick="filterLists('others')">เครื่องมืออื่นๆ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-list-wrapper">
+
+        <div class="category-box" data-panel="construction">
+            <h2><i class="fa-solid fa-trowel-bricks text-logo"></i> เครื่องมือช่างก่อสร้าง (Construction Tools)</h2>
+            <ul class="item-ul">
+                <li><i class="fa-solid fa-trowel"></i> เกรียงเหล็ก / เกรียงไม้ <span>สำหรับงานก่ออิฐและฉาบปูน</span></li>
+                <li><i class="fa-solid fa-hammer"></i> ค้อนหงอนเหล็ก <span>สำหรับตอกและถอนตะปู</span></li>
+                <li><i class="fa-solid fa-bucket"></i> ถังปูน / ตะแร่งร่อนทราย <span>อุปกรณ์ผสมและลำเลียงปูน</span></li>
+                <li><i class="fa-solid fa-compass-drafting"></i> สายยางวัดระดับน้ำ / ระดับน้ำตลับ <span>วัดความเที่ยงตรงของระนาบ</span></li>
+                <li><i class="fa-solid fa-ruler-combined"></i> ตลับเมตรมาตรฐาน <span>ขนาด 3m, 5m, 8m</span></li>
+                <li><i class="fa-solid fa-shovel"></i> พลั่วหนีบดิน / พลั่วตักทราย <span>งานขุดเจาะและตักวัสดุ</span></li>
+            </ul>
+        </div>
+
+        <div class="category-box" data-panel="electrical">
+            <h2><i class="fa-solid fa-bolt text-logo"></i> เครื่องมือช่างไฟฟ้า (Electrical Tools)</h2>
+            <ul class="item-ul">
+                <li><i class="fa-solid fa-screwdriver"></i> ไขควงวัดไฟ (Digital & Neon) <span>เช็กกระแสไฟฟ้าปลอดภัย</span></li>
+                <li><i class="fa-solid fa-scissors"></i> คีมปอกสายไฟ / คีมตัดฉนวน <span>ตัดและปอกสายไฟแม่นยำ</span></li>
+                <li><i class="fa-solid fa-box-tissue"></i> เทปพันสายไฟ <span>แบรนด์ 3M และทั่วไป กันไฟรั่ว</span></li>
+                <li><i class="fa-solid fa-gauge"></i> มิเตอร์วัดไฟ / มัลติมิเตอร์ <span>ตรวจเช็กแรงดันและกระแสไฟ</span></li>
+                <li><i class="fa-solid fa-bezier-curve"></i> ท่อหด / ข้อต่อสายไฟ <span>อุปกรณ์จัดระเบียบและป้องกันสายไฟ</span></li>
+                <li><i class="fa-solid fa-cut"></i> คัตเตอร์ตัดสายไฟหนา <span>ใบมีดคมพิเศษสำหรับงานไฟฟ้า</span></li>
+            </ul>
+        </div>
+
+        <div class="category-box" data-panel="plumbing">
+            <h2><i class="fa-solid fa-droplet text-logo"></i> เครื่องมือช่างประปา (Plumbing Tools)</h2>
+            <ul class="item-ul">
+                <li><i class="fa-solid fa-circle-cut"></i> กรรไกรตัดท่อ PVC <span>ตัดท่อตรงสวย ขอบไม่แตก</span></li>
+                <li><i class="fa-solid fa-wrench"></i> ประแจเลื่อน / ประแจคอม้า <span>สำหรับขันข้อต่อและน็อตเหล็ก</span></li>
+                <li><i class="fa-solid fa-scroll"></i> เทปพันเกลียวท่อประปา <span>ป้องกันน้ำซึมตามรอยต่อข้อเกลียว</span></li>
+                <li><i class="fa-solid fa-flask"></i> กาวทาท่อ PVC <span>น้ำยาประสานท่อเข้มข้น ยึดแน่นแห้งไว</span></li>
+                <li><i class="fa-solid fa-wind"></i> สปริงทะลวงท่อแก้ท่อตัน <span>อุปกรณ์ล้างสิ่งอุดตันในเส้นท่อ</span></li>
+                <li><i class="fa-solid fa-grip"></i> คีมล็อกงานประปา <span>จับยึดท่อกลมได้แน่นหนา</span></li>
+            </ul>
+        </div>
+
+        <div class="category-box" data-panel="others">
+            <h2><i class="fa-solid fa-toolbox text-logo"></i> เครื่องมืออื่นๆ และอุปกรณ์เซฟตี้ (Other Tools)</h2>
+            <ul class="item-ul">
+                <li><i class="fa-solid fa-boxes-stacked"></i> กล่องเก็บเครื่องมืออเนกประสงค์ <span>พลาสติกหนาพิเศษ มีช่องแบ่งชั้น</span></li>
+                <li><i class="fa-solid fa-mitten"></i> ถุงมือผ้าเคลือบยางกันบาด <span>กระชับมือ กันลื่น หยิบจับปลอดภัย</span></li>
+                <li><i class="fa-solid fa-glasses"></i> แว่นตานิรภัย / หน้ากากกันฝุ่น <span>ป้องกันเศษวัสดุและฝุ่นละออง</span></li>
+                <li><i class="fa-solid fa-key"></i> ชุดประแจหกเหลี่ยม / ไขควงสลับด้าม <span>งานขันประกอบทั่วไป</span></li>
+                <li><i class="fa-solid fa-saw"></i> โครงเลื่อยเหล็ก / ใบเลื่อย <span>สำหรับตัดโลหะและพลาสติก</span></li>
+                <li><i class="fa-solid fa-spray-can"></i> น้ำมันอเนกประสงค์ (WD-40 / Sonax) <span>ฉีดไล่ความชื้นและกันสนิม</span></li>
+            </ul>
+        </div>
+
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

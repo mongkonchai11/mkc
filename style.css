@@ -1,0 +1,543 @@
+/* =========================================================
+   1. GLOBAL & VIEWPORT CONTROL (RESPONSIVE SUPPORT)
+   ========================================================= */
+body {
+    background: url('unnamed.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    
+    /* Responsive width: Locks size on desktop but allows shrinking on mobile */
+    width: 100%; 
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   2. HEADER & BURGER ICON NAVIGATION
+   ========================================================= */
+#nav {
+    background: linear-gradient(135deg, #18acb600, #a0db1600);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.burger-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(8, 39, 216);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.burger-icon:hover {
+    transition: 0.3s;
+    color: #111;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0; 
+}
+
+.header h1 {
+    font-family: 'Prompt', sans-serif;
+    color: #ffffff;             
+    font-size: 3.2rem;          
+    font-weight: 800;           
+    margin: 0 0 10px 0;         
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 
+                 -1px -1px 0 rgba(0, 0, 0, 0.5),  
+                  1px -1px 0 rgba(0, 0, 0, 0.5),
+                 -1px  1px 0 rgba(0, 0, 0, 0.5),
+                  1px  1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.header h2 {
+    font-family: 'Prompt', sans-serif;
+    color: #e74c3c;             
+    font-size: 1.15rem;         
+    font-weight: 600;           
+    margin: 0;                  
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 6px 22px;          
+    border-radius: 30px;        
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    display: inline-block;      
+}
+
+/* =========================================================
+   3. SIDEBAR MENU STYLES
+   ========================================================= */
+.menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100vh;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding-top: 60px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00ffb3, #00b3ff);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #111;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 255, 179, 0.3);
+    transition: 0.3s;
+    width: 150px;
+    height: 40px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 179, 0.5);
+}
+
+/* =========================================================
+   4. WEBPAGE CONTAINERS STRIP SYSTEM (ZIGZAG)
+   ========================================================= */
+.first-container, 
+.second-container, 
+.third-container, 
+.fourth-container, 
+.fifth-container {
+    width: 100%;          
+    text-align: center;
+    height: auto;
+    min-height: 500px;
+    border-radius: 10px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.first-container {
+    background: linear-gradient(135deg, #5b615f57, #5e8596b7);
+    transform: translateX(0px);
+}
+
+.second-container {
+    background: linear-gradient(135deg, #04b422c5, #2316dbb7);
+    transform: translateX(20px); 
+}
+
+.third-container {
+    background: linear-gradient(135deg, #c720bfc0, #ca350fce);
+    transform: translateX(0px);
+}
+
+.fourth-container {
+    background: linear-gradient(135deg, #d6da0ece, #08e42dc4);
+    transform: translateX(20px);
+}
+
+.fifth-container {
+    background: linear-gradient(135deg, #0213ffb0, #9f03beb7);
+    transform: translateX(0px);
+}
+
+.first-container span,
+.second-container span,
+.third-container span,
+.fourth-container span,
+.fifth-container span {
+    cursor: pointer;
+    display: block;
+}
+
+.construction-object:hover,
+.metal-object:hover,
+.color-object:hover ,
+.other:hover,
+.wood:hover {
+    color: yellow;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+h3{
+    color :#ff9900;
+    background-color: #1004bba6;
+    
+}
+.construction-object,
+.metal-object,
+.color-object ,
+.other,
+.wood p{
+    color: #02007adc;
+}
+
+/* =========================================================
+   5. PORTRAIT WIDE PRODUCT CARDS
+   ========================================================= */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    gap: 8px;
+    transition: 0.3s;
+    padding: 0;
+    margin: 20px auto 0 auto;
+    list-style: none;
+}
+
+.container:hover {
+    gap: 0;
+}
+
+.container li {
+    position: relative;
+    overflow: hidden; 
+    flex: 1 1 180px;  
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1.2px solid #eee;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4), -2px -5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.container li:hover {
+    flex: 4 0 550px; 
+    scale: 1.05;
+    z-index: 10;
+    opacity: 1;
+}
+
+.container li img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.container li .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    color: #fff;
+    padding: 15px;
+    background: linear-gradient(0deg, rgb(0 0 0 / 85%) 15%, rgb(255 255 255 / 0%) 100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.container li .content span {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.85) translateX(-50%);
+    bottom: 10px;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    text-align: center;
+    width: 85%;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container li:hover .content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container li:hover span { 
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.content p, .content h2 {
+    font-size: small;
+    color: #ffffff; 
+    background-color: rgba(0, 0, 0, 0.65); 
+    padding: 6px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+/* =========================================================
+   6. RESPONSIVE MEDIA QUERY FOR SMARTPHONES & TABLETS
+   ========================================================= */
+@media (max-width: 992px) {
+    body {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Cancel desktop shifting on mobile view */
+    .second-container, 
+    .fourth-container {
+        transform: translateX(0px) !important;
+    }
+
+    .first-container, 
+    .second-container, 
+    .third-container, 
+    .fourth-container, 
+    .fifth-container {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        height: auto !important;
+    }
+
+    /* Convert horizontal layout to clean standard vertical block scrolling */
+    .container {
+        display: block !important; 
+        height: auto !important;
+        padding: 0 !important;
+        margin: 15px auto 0 auto !important;
+    }
+
+    /* Beautiful small portrait-card standard for smartphones */
+    .container li {
+        display: block !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 320px !important; /* Perfect phone width proportions */
+        height: 250px !important;    /* Clean small portrait style height */
+        margin: 15px auto !important; /* Center card and make spacing */
+        flex: none !important;
+    }
+
+    /* Control responsiveness behavior on mobile interactions */
+    .container li:hover {
+        scale: 1.03 !important;
+        flex: none !important;
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+
+    .container li .content {
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: linear-gradient(0deg, rgb(0 0 0 / 75%) 35%, rgb(255 255 255 / 0%) 100%) !important;
+    }
+
+    .container li .content span {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: scale(1) translateX(-50%) !important;
+    }
+}
+.contactqr img{
+    width :80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}/* นำส่วนนี้ไปเขียนต่อท้ายไฟล์ style.css เดิมของคุณ */
+
+.text-list-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.category-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-left: 6px solid #ff9900;
+}
+
+.category-box h2 {
+    font-family: 'Prompt', sans-serif;
+    color: #111;
+    margin-top: 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ตกแต่งโลโก้ไอคอนหน้าหัวข้อหลัก */
+.text-logo {
+    color: #ff9900;
+}
+
+.item-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.item-ul li {
+    font-family: 'Prompt', sans-serif;
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    color: #333;
+    font-weight: 600;
+    transition: 0.2s;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px; /* ระยะห่างระหว่างโลโก้ไอคอนกับชื่อสิ่งของ */
+}
+
+/* ปรับแต่งไอคอน/โลโก้ขนาดเล็กหน้ารายชื่อสิ่งของ */
+.item-ul li i {
+    color: #1004bb;
+    font-size: 16px;
+    margin-top: 4px;
+    transition: 0.2s;
+}
+
+.item-ul li:hover {
+    background: #ff9900;
+    color: #fff;
+    transform: translateY(-2px);
+    border-color: #ff9900;
+}
+
+/* สลับสีไอคอนเป็นสีขาวตอนเมาส์ชี้เพื่อความชัดเจน */
+.item-ul li:hover i {
+    color: #fff;
+}
+
+.item-ul li span {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    font-weight: normal;
+    margin-top: 4px;
+}
+
+.item-ul li:hover span {
+    color: #fff;
+}
+
+/* โครงสร้างเมนู Dropdown เสริมใน Sidebar */
+.menu-links .dropdown {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.menu-links .dropbtn {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9900, #ff5500);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 85, 0, 0.3);
+    transition: 0.3s;
+}
+
+.menu-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.95);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    z-index: 1000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu-links .dropdown-content a {
+    color: #ffffff !important;
+    padding: 12px 16px !important;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.menu-links .dropdown-content a:hover {
+    background-color: #ff9900;
+    color: #111111 !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* =========================================================
+   9. SOLO PRODUCT OBJECT STYLES
+   ========================================================= */
+.solo-object-wrapper {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ควบคุมให้การ์ดเดี่ยวที่อยู่ใน Container นี้ แผ่ขยายขนาดความกว้างเต็มที่เมื่อเมาส์ชี้ */
+.solo-object-wrapper .container li {
+    flex: 1 1 100%; /* บังคับให้ออบเจกต์ชิ้นเดี่ยวใช้พื้นที่เต็มขนาดกล่องอย่างสวยงาม */
+}
